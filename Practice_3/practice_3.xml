@@ -8,16 +8,16 @@
 				<tipo>Accidentes</tipo>
 				<capital>10000</capital>				
 			</garantia>
-				<garantia vigor="S">
+			<garantia vigor="S">
 				<tipo>Dental</tipo>
 				<capital>500</capital>
 			</garantia>
 		</asegurado>
 		<asegurado nombre="Juan" apellidos="López">
-		<garantia vigor="N">
-			<tipo>Vida</tipo>
-			<capital>60000</capital>
-		</garantia>
+			<garantia vigor="N">
+				<tipo>Vida</tipo>
+				<capital>60000</capital>
+			</garantia>
 		</asegurado>
 	</poliza>
 	<poliza externa="S">
@@ -66,5 +66,11 @@ b) Obtener el número de la segunda póliza
 	//poliza[@externa='S']/numero
 c) Obtener el primer tomador de cada póliza
 
+	//tomador
 
+d) Seleccionar los asegurados que tengan contratada la garantía dental
+
+	//poliza/asegurado[garantia/tipo='Dental']/@nombre
+
+e) Seleccionar las pólizas con el indicador externa
 -->
