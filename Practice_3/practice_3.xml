@@ -73,4 +73,32 @@ d) Seleccionar los asegurados que tengan contratada la garantía dental
 	//poliza/asegurado[garantia/tipo='Dental']/@nombre
 
 e) Seleccionar las pólizas con el indicador externa
+
+	//poliza/@externa
+
+f) Seleccionar las garantías que tienen el indicador vigor con valor “N”
+	
+//poliza/asegurado/garantia[@vigor='N']/node()
+g) Seleccionar todos los capitales de garantías que tienen el indicador vigor =”S”
+	//poliza/asegurado/garantia[@vigor='S']/capital
+h) Seleccionar todos los asegurados cuyo nombre empieza con la letra “J”
+	//poliza/asegurado/@nombre[starts-with(.,'J')]
+i) Obtener la suma de capitales de las garantías en vigor
+	sum(//poliza/asegurado/garantia/capital)
+j) Seleccionar las pólizas con alguna garantía cuyo capital sea de 80000 euros
+	//poliza/asegurado/garantia/capital[contains(.,'80000')]
+k) Obtener los nodos numero y tomadores de todas las pólizas (Tratamiento iterativo)	
+	for $i in doc("C:/Users/sicar/Documents/GitHub/DataBase-Topics/Practice_3/practice_3.xml")/envio/poliza/numero 
+	return $i
+	for $i in doc("C:/Users/sicar/Documents/GitHub/DataBase-Topics/Practice_3/practice_3.xml")/envio/poliza/tomador 
+	return $i
+i) Obtener los nodos numero de pólizas con más de dos asegurados (tratamiento condicional)
+	for $i in doc("C:/Users/sicar/Documents/GitHub/DataBase-Topics/Practice_3/practice_3.xml")/envio/poliza
+
+	return
+	if(count($i/asegurado)>2)  
+	then  ($i//numero) 
+	else()
+m) Obtener todos los asegurados que tienen alguna garantía que no esta en vigor (operador existencial some)
+
 -->
