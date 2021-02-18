@@ -1,0 +1,17 @@
+<!-- DTD created at Mon Nov 09 19:47:55 CST 2020 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+<!-- ANY  whatever other thing(text or elements)-->
+<!ELEMENT library (carrer*,name*,author*,pages*,price*,publisher*)>
+<!ELEMENT carrer ANY>
+<!ATTLIST carrer name (CS|Medicine|Business|Turism) #REQUIRED>
+
+<!ELEMENT bookID ANY>
+<!ATTLIST bookID id ID #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT pages (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+
+
+

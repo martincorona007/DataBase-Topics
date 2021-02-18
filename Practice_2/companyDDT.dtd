@@ -1,0 +1,22 @@
+<!-- DTD created at Mon Nov 09 21:45:24 CST 2020 with EditiX XML Editor (http://www.editix.com). Please insert an encoding attribute header for converting any DTD  -->
+
+<!ELEMENT category ANY>
+
+<!ATTLIST category namecat (Design|Development|Marketing|ITandSoftware|Music|Photography|Business|PersonalDevelopment) #REQUIRED> 
+
+<!ELEMENT curseID ANY>
+<!ATTLIST curseID id ID #REQUIRED>
+
+
+<!ELEMENT curse ANY>
+
+<!ELEMENT content ANY>
+
+<!ELEMENT name (#PCDATA)>
+
+<!ELEMENT tutor (#PCDATA)>
+
+<!ELEMENT lectures (#PCDATA)>
+
+<!ELEMENT sections (#PCDATA)>
+<!ELEMENT rating (#PCDATA)>
